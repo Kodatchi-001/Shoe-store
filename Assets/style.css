@@ -17,6 +17,10 @@ header div ul a:hover {
     background-color: rgb(240, 240, 240);
 }
 
+.card-page-1{
+    background-color: white;
+}
+
 @media (min-width:1001px) {
     .card-page-1:hover {
         border-radius: 10px;
