@@ -1,14 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Clash Display', sans-serif;
+    scroll-behavior: smooth;
 }
-header div ul a{
+
+header div ul a {
     transition: 0.5s ease;
 }
-header div ul a:hover{
+
+header div ul a:hover {
     color: #fbb239;
 }
-*{
-    border: 1px solid red;
+
+.bg-gray {
+    background-color: rgb(240, 240, 240);
+}
+
+@media (min-width:1001px) {
+    .card-page-1:hover {
+        border-radius: 10px;
+        background-color: black;
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: white;
+        }
+
+        img {
+            filter: invert(100%) brightness(100%);
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .card-page-1{
+        border-radius: 10px;
+        background-color: black;
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: white;
+        }
+
+        img {
+            filter: invert(100%) brightness(100%);
+        }
+    }
 }
