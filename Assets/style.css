@@ -17,7 +17,7 @@ header div ul a:hover {
     background-color: rgb(240, 240, 240);
 }
 
-.card-page-1{
+.card-page-1 {
     background-color: white;
 }
 
@@ -41,7 +41,7 @@ header div ul a:hover {
 }
 
 @media (max-width:1000px) {
-    .card-page-1{
+    .card-page-1 {
         border-radius: 10px;
         background-color: black;
 
@@ -57,4 +57,12 @@ header div ul a:hover {
             filter: invert(100%) brightness(100%);
         }
     }
+}
+
+.link-shoes h1 {
+    transition: 0.8s ease;
+}
+
+.link-shoes h1:hover {
+    color: #fbb239;
 }
