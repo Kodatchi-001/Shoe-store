@@ -88,3 +88,14 @@ header div ul a:hover {
         background: 0
     }
 }
+
+.bg-image{
+    background-image: url(bg-choes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bg-gray-blur{
+    background-color: rgba(0, 0, 0, 0.724);
+}
