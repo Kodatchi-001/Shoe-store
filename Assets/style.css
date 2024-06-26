@@ -79,6 +79,6 @@ header div ul a:hover {
 
 @media (max-width:1023px) {
     .bg-cercle{
-        background: radial-gradient(circle 215vw at center, transparent 0%, transparent 20%, black 20%);
+        background: 0
     }
 }
