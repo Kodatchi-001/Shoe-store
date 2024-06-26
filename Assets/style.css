@@ -4,7 +4,9 @@
     font-family: 'Clash Display', sans-serif;
     scroll-behavior: smooth;
 }
-
+section{
+    overflow: hidden;
+}
 header div ul a {
     transition: 0.5s ease;
 }
