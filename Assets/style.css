@@ -67,18 +67,24 @@ header div ul a:hover {
     color: #fbb239;
 }
 
-.bg-blur{
+.bg-blur {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.358);
     background-color: rgba(107, 107, 107, 0.395);
 }
 
-.bg-cercle{
+.bg-cercle {
     background: radial-gradient(circle 75vw at center, transparent 0%, transparent 20%, black 20%);
 }
 
+@media (min-width:1024px) and (max-width:1279px) {
+    .bg-cercle {
+        background: radial-gradient(circle 100vw at center, transparent 0%, transparent 20%, black 20%);
+    }
+}
+
 @media (max-width:1023px) {
-    .bg-cercle{
+    .bg-cercle {
         background: 0
     }
 }
