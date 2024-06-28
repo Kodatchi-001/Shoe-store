@@ -76,11 +76,6 @@ function cards_page_2_cards_5(direction) {
     document.querySelector('.cards-5').style.transform = `translateX(${currentIndex5 * -100}%)`;
 }
 
-// move-slide
-function moveSlide(direction, currentIndex, totalSlides) {
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-    return currentIndex;
-}
 
 //cards-slides-page-3
 var currentIndex6 = 0;
@@ -95,7 +90,6 @@ function cards_page_3(direction) {
 
     update_number(currentIndex6);
 }
-
 
 function update_number(currentIndex) {
     const displayIndex = (currentIndex % totalNumbers) + 1;
@@ -118,4 +112,18 @@ function update_number(currentIndex) {
 //     }, 1000);
 // }
 
+//cards-slides-page-4
+var currentIndex7 = 0;
 
+function cards_page_4(direction) {
+    const slides = document.querySelectorAll('.card-slides-page-4');
+    const totalSlides = slides.length;
+    currentIndex7 = moveSlide(direction, currentIndex7, totalSlides);
+    document.querySelector('.cards-page-4').style.transform = `translateX(${currentIndex7 * -100}%)`;
+}
+
+// move-slide
+function moveSlide(direction, currentIndex, totalSlides) {
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    return currentIndex;
+}
