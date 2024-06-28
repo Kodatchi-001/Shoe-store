@@ -1,3 +1,12 @@
+//Shopping Cart
+var shopp = document.querySelector('.card-shop');
+function Shopping_Cart_show() {
+    shopp.style.marginLeft = '0vw'
+}
+function Shopping_Cart_hidden() {
+    shopp.style.marginLeft = ''
+}
+
 //All-Button
 function button_slides() {
     //home-page
@@ -117,7 +126,6 @@ function update_tittle(currentIndex) {
         prix_card.textContent = list_prix[currentIndex];
     }
 }
-
 
 //cards-slides-page-4
 var currentIndex7 = 0;

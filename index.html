@@ -28,11 +28,61 @@
             </ul>
             <div class=" w-1/2 lg:w-[10%] flex justify-end lg:justify-around gap-2 lg:gap-0">
                 <i class='bx bx-search text-2xl lg:text-xl font-bold cursor-pointer'></i>
-                <i class='bx bx-cart text-2xl lg:text-xl font-bold cursor-pointer'></i>
+                <i class='bx bx-cart text-2xl lg:text-xl font-bold cursor-pointer' onclick="Shopping_Cart_show()"></i>
                 <i class='bx bx-user text-2xl lg:text-xl font-bold cursor-pointer'></i>
             </div>
         </div>
     </header>
+    <!-- Card/Shop -->
+    <div class="w-full lg:w-[50vh] h-[90vh] ml-[-150vw] lg:ml-[-80vw] z-50 absolute flex justify-center items-center flex-wrap bg-gray rounded-xl p-5 card-shop"
+        style="box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.176);transition: 0.8s ease;">
+        <div class="w-full h-1/6 flex justify-between">
+            <h1 class="text-3xl">Shopping Cart</h1>
+            <i class='bx bx-x text-3xl cursor-pointer' onclick="Shopping_Cart_hidden()"></i>
+        </div>
+        <div class="w-full h-5/6 flex flex-col gap-3">
+            <div class="lg:w-full sm:w-[48%] h-[18vh] sm:h-2/3 lg:h-[15vh] flex p-3 rounded-lg gap-3 bg-black">
+                <div class="w-[35%] flex justify-center items-center rounded-lg bg-white">
+                    <img src="Assets/cards-home-page-1.png" class="w-full ml-[-5vw] sm:ml-[-3vw] lg:ml-[-1vw]"
+                        style="rotate: -30deg;" alt="">
+                </div>
+                <div class="w-3/5 flex flex-wrap text-white">
+                    <h1 class="text-sm">Air MAX 90 FLYEASE</h1>
+                    <h5 class="w-full text-gray-400" style="font-size: 10px;">
+                        <i class='bx bxs-star'></i>
+                        (4.5)
+                    </h5>
+                    <div class="w-full flex justify-between">
+                        <h1>$189</h1>
+                        <i class='bx bxs-heart cursor-pointer'></i>
+                    </div>
+                    <h2 class="text-sm text-[#fbb239] cursor-pointer" style="font-size: 12px;">
+                        Add to Cart
+                    </h2>
+                </div>
+            </div>
+            <div class="lg:w-full sm:w-[48%] h-[18vh] sm:h-2/3 lg:h-[15vh] flex p-3 rounded-lg gap-3 bg-black">
+                <div class="w-[35%] flex justify-center items-center rounded-lg bg-white">
+                    <img src="Assets/sandale-3.png" class="w-full ml-[-5vw] sm:ml-[-3vw] lg:ml-[-1vw]"
+                        style="rotate: -30deg;" alt="">
+                </div>
+                <div class="w-3/5 flex flex-wrap text-white">
+                    <h1 class="text-sm">Jordan Sophia</h1>
+                    <h5 class="w-full text-gray-400" style="font-size: 10px;">
+                        <i class='bx bxs-star'></i>
+                        (4.5)
+                    </h5>
+                    <div class="w-full flex justify-between">
+                        <h1>$189</h1>
+                        <i class='bx bxs-heart cursor-pointer'></i>
+                    </div>
+                    <h2 class="text-sm text-[#fbb239] cursor-pointer" style="font-size: 12px;">
+                        Add to Cart
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- home-page -->
     <section class="w-full lg:h-[90vh] flex justify-center" id="home-page">
         <div class="w-[90%] h-full flex flex-wrap">
