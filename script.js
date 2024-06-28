@@ -6,40 +6,69 @@ function Shopping_Cart_show() {
 function Shopping_Cart_hidden() {
     shopp.style.marginLeft = ''
 }
-
-//All-Button
+// All-Button
 function button_slides() {
-    //home-page
+    // home-page
     document.getElementById('btn-1').addEventListener('click', () => scrollToSlide(0));
     document.getElementById('btn-2').addEventListener('click', () => scrollToSlide(1));
     document.getElementById('btn-3').addEventListener('click', () => scrollToSlide(2));
     document.getElementById('btn-4').addEventListener('click', () => scrollToSlide(3));
     document.getElementById('btn-5').addEventListener('click', () => scrollToSlide(4));
-    //page-2
+    // page-2
     document.getElementById('btn-1-page-2').addEventListener('click', () => scrollToSlide_2(0));
     document.getElementById('btn-2-page-2').addEventListener('click', () => scrollToSlide_2(1));
     document.getElementById('btn-3-page-2').addEventListener('click', () => scrollToSlide_2(2));
     document.getElementById('btn-4-page-2').addEventListener('click', () => scrollToSlide_2(3));
     document.getElementById('btn-5-page-2').addEventListener('click', () => scrollToSlide_2(4));
 }
-button_slides()
-//Cards-slides-Home-Page
+button_slides();
+
+// Cards-slides-Home-Page
+let currentSlideIndex = 0;
+
 function scrollToSlide(slideIndex) {
     const slidesContainer = document.querySelector('.cards-slides-home-page');
     slidesContainer.style.transform = `translateX(${slideIndex * -100}%)`;
-    update_button(slideIndex)
+    currentSlideIndex = slideIndex;
+    update_button(slideIndex);
 }
 
 function update_button(index_button) {
     const buttons = document.querySelectorAll('.w-3.h-3.rounded-full.cursor-pointer');
     buttons.forEach((button, index) => {
-        if (index === index_button) {
-            button.style.backgroundColor = '#dc2626'
-        } else {
-            button.style.backgroundColor = 'black'
+        if(index === index_button){
+            button.style.backgroundColor =  '#dc2626'
+        }
+        else{
+            button.style.backgroundColor =  'black'
         }
     });
 }
+
+// Swipe functionality for mobile
+let startX = 0;
+let currentX = 0;
+
+const slidesContainer = document.querySelector('.cards-slides-home-page');
+
+slidesContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener('touchmove', (e) => {
+    currentX = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener('touchend', (e) => {
+    const threshold = 50; // Minimum swipe distance
+    const swipeDistance = currentX - startX;
+
+    if (swipeDistance > threshold && currentSlideIndex > 0) {
+        scrollToSlide(currentSlideIndex - 1);
+    } else if (swipeDistance < -threshold && currentSlideIndex < 4) {
+        scrollToSlide(currentSlideIndex + 1);
+    }
+});
 
 //Cards-slides-Page-2
 function scrollToSlide_2(slideIndex) {
