@@ -89,6 +89,7 @@ function cards_page_3(direction) {
     document.querySelector('.cards-page-3').style.transform = `translateX(${currentIndex6 * -100}%)`;
 
     update_number(currentIndex6);
+    update_tittle(currentIndex6)
 }
 
 function update_number(currentIndex) {
@@ -104,13 +105,19 @@ function update_number(currentIndex) {
     }
 }
 
-// function crecle_image() {
-//     const cercle = document.querySelector('.bg-cercle')
-//     cercle.style.background = 'radial-gradient(circle 0vw at center, transparent 0%, transparent 20%, black 20%)'
-//     setTimeout(() => {
-//         cercle.style.background = ''
-//     }, 1000);
-// }
+function update_tittle(currentIndex) {
+    const title_card = document.getElementById('tittle-card');
+    const prix_card = document.getElementById('prix-card');
+    const list_titles = ['Nike Air 1', 'Luka 2 Team ', 'Nike InfinityRN 4', 'ACG Mountain', 'Jordan Spizike ', 'Free Metcon', 'Air Jordan 5', 'Air MAX 90', 'Nike Mercurial', 'Air Force'];
+    const list_prix = ['$32.99', '$80.5', '$150', '$130.99', '$45.99', '$60', '$180.99', '$60.99', '$200', '$110.99'];
+
+    // Ensure currentIndex is within bounds of list_titles
+    if (currentIndex >= 0 && currentIndex < list_titles.length && currentIndex < list_prix.length) {
+        title_card.textContent = list_titles[currentIndex];
+        prix_card.textContent = list_prix[currentIndex];
+    }
+}
+
 
 //cards-slides-page-4
 var currentIndex7 = 0;
