@@ -61,12 +61,8 @@ header div ul a:hover {
     }
 }
 
-.link-shoes h1 {
+.link-shoes h1,.cards {
     transition: 0.8s ease;
-}
-
-.link-shoes h1:hover {
-    color: #fbb239;
 }
 
 .bg-blur {
