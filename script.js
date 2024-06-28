@@ -50,7 +50,7 @@ function update_button_2(index_button) {
     });
 }
 
-//cards-slides
+//cards-slides-page-2
 var currentIndex1 = 0;
 var currentIndex4 = 0;
 var currentIndex5 = 0;
@@ -58,25 +58,64 @@ var currentIndex5 = 0;
 function cards_page_2_cards_1(direction) {
     const slides = document.querySelectorAll('.card-slides-1');
     const totalSlides = slides.length;
-    currentIndex1 = moveSlide(direction,currentIndex1,totalSlides);
+    currentIndex1 = moveSlide(direction, currentIndex1, totalSlides);
     document.querySelector('.cards-1').style.transform = `translateX(${currentIndex1 * -100}%)`;
 }
 
 function cards_page_2_cards_4(direction) {
     const slides = document.querySelectorAll('.card-slides-4');
     const totalSlides = slides.length;
-    currentIndex4 = moveSlide(direction,currentIndex4,totalSlides);
+    currentIndex4 = moveSlide(direction, currentIndex4, totalSlides);
     document.querySelector('.cards-4').style.transform = `translateX(${currentIndex4 * -100}%)`;
 }
 
 function cards_page_2_cards_5(direction) {
     const slides = document.querySelectorAll('.card-slides-5');
     const totalSlides = slides.length;
-    currentIndex5 = moveSlide(direction,currentIndex5,totalSlides);
+    currentIndex5 = moveSlide(direction, currentIndex5, totalSlides);
     document.querySelector('.cards-5').style.transform = `translateX(${currentIndex5 * -100}%)`;
 }
 
-function moveSlide(direction,currentIndex, totalSlides) {
+// move-slide
+function moveSlide(direction, currentIndex, totalSlides) {
     currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
     return currentIndex;
 }
+
+//cards-slides-page-3
+var currentIndex6 = 0;
+const totalNumbers = 10;
+
+function cards_page_3(direction) {
+    const slides = document.querySelectorAll('.card-slides-page-3');
+    const totalSlides = slides.length;
+
+    currentIndex6 = moveSlide(direction, currentIndex6, totalSlides);
+    document.querySelector('.cards-page-3').style.transform = `translateX(${currentIndex6 * -100}%)`;
+
+    update_number(currentIndex6);
+}
+
+
+function update_number(currentIndex) {
+    const displayIndex = (currentIndex % totalNumbers) + 1;
+    const numberslide = document.getElementById('number-slider')
+
+    numberslide.textContent = `${displayIndex}`;
+
+    if (displayIndex === 10) {
+        numberslide.style.color = '#4b5563';
+    } else {
+        numberslide.style.color = '';
+    }
+}
+
+// function crecle_image() {
+//     const cercle = document.querySelector('.bg-cercle')
+//     cercle.style.background = 'radial-gradient(circle 0vw at center, transparent 0%, transparent 20%, black 20%)'
+//     setTimeout(() => {
+//         cercle.style.background = ''
+//     }, 1000);
+// }
+
+
